@@ -11,10 +11,12 @@ public class Main {
 //        System.out.println(linkedListTest.getLength());
 
         linkedListTest.append(6);linkedListTest.append(3);linkedListTest.append(61);linkedListTest.append(45);
-        linkedListTest.remove();
-        linkedListTest.prepend(90);
-        linkedListTest.removeFirst();
-        linkedListTest.printList();
+//        linkedListTest.remove();
+//        linkedListTest.prepend(90);
+//        linkedListTest.removeFirst();
+//        linkedListTest.printList();
+
+        System.out.println(linkedListTest.get(1).value);
     }
 
 

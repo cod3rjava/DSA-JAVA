@@ -118,6 +118,26 @@ public class LinkedListTest {
         return firstNode;
     }
 
+    public Node get(int index) {
+        if (index < 0 || index >= length) {
+            return null;
+        }
+
+        Node temp = head;
+
+        // Follow the while loop or for loop
+//        int count = 0;
+//        while (count != index) {
+//            temp = temp.next;
+//            count++;
+//        }
+
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
+
     public LinkedListTest(int value) {
         Node newNode = new Node(value);
         head = newNode;
@@ -129,8 +149,8 @@ public class LinkedListTest {
 
 
     class Node {
-        private int value;
-        private Node next;
+         int value;
+         Node next;
 
         Node(int value){
             this.value = value;
