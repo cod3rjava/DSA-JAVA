@@ -101,6 +101,23 @@ public class LinkedListTest {
         length++;
     }
 
+    public Node removeFirst() {
+        if (length == 0) {
+            return null;
+        }
+//        if (head == tail) { // you can follow this or
+//            head = tail = null;
+//        }
+        Node firstNode = head;
+        head = head.next;
+        firstNode.next = null;
+        length--;
+        if (length == 0) { // or this approach for the edge cash where we have only one element in the list
+            tail = null;
+        }
+        return firstNode;
+    }
+
     public LinkedListTest(int value) {
         Node newNode = new Node(value);
         head = newNode;
