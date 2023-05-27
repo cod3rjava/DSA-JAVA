@@ -66,7 +66,7 @@ public class LinkedListTest {
         length--;
     }
 
-    public Node remove() {
+    public Node removeLast() {
         if (length == 0) {
             return null;
         }
@@ -165,6 +165,24 @@ public class LinkedListTest {
         temp.next = currentNode;
         length++;
         return true;
+    }
+
+    public Node remove(int index) {
+        if (index < 0 || index >= length) {
+            return null;
+        }
+        if (index == 0) {
+            return removeFirst();
+        }
+        if (index == length - 1) {
+            return removeLast();
+        }
+        Node prevNode = get(index - 1);
+        Node temp = prevNode.next;
+        prevNode.next = temp.next;
+        temp.next = null;
+        length--;
+        return temp;
     }
 
     public LinkedListTest(int value) {
