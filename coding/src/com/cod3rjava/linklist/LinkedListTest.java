@@ -185,6 +185,25 @@ public class LinkedListTest {
         return temp;
     }
 
+    public void reverse() {
+        if (length == 0 || length == 1) {
+            return;
+        }
+        Node temp = head;
+        head = tail;
+        tail = head;
+        Node before = null;
+        Node after = temp.next;
+
+        for (int i = 0; i < length; i++) {
+            after = temp.next;
+            temp.next = before;
+            before = temp;
+            temp = after;
+        }
+    }
+
+
     public LinkedListTest(int value) {
         Node newNode = new Node(value);
         head = newNode;

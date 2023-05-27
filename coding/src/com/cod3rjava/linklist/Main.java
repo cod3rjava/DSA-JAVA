@@ -19,7 +19,9 @@ public class Main {
 //        linkedListTest.set(2, 64);
 //        linkedListTest.insert(0, 99);
 //        linkedListTest.insert(3, 29);
-        linkedListTest.remove(4);
+//        linkedListTest.remove(4);
+        linkedListTest.printList();
+        linkedListTest.reverse();
         linkedListTest.printList();
     }
 
