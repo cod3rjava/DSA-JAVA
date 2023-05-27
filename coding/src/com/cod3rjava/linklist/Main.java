@@ -14,9 +14,12 @@ public class Main {
 //        linkedListTest.remove();
 //        linkedListTest.prepend(90);
 //        linkedListTest.removeFirst();
-//        linkedListTest.printList();
 
-        System.out.println(linkedListTest.get(1).value);
+//        System.out.println(linkedListTest.get(1).value);
+        linkedListTest.set(2, 64);
+//        linkedListTest.insert(0, 99);
+        linkedListTest.insert(3, 29);
+        linkedListTest.printList();
     }
 
 
